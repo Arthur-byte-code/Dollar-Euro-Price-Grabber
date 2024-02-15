@@ -1,5 +1,8 @@
 ### Dollar-Euro Price Grabber
-![D E](https://github.com/Arthur-byte-code/Dollar-Euro-Price-Grabber/assets/152222113/69923a41-e566-4d84-be7a-14f35c3d8e65)
+![bgi](https://github.com/Arthur-byte-code/Dollar-Euro-Price-Grabber/assets/152222113/31c22f28-5db4-463c-9807-6b3a12a5c72a)
+### When the program finishes, it shows the result
+![resul](https://github.com/Arthur-byte-code/Dollar-Euro-Price-Grabber/assets/152222113/3a57e2eb-c6f6-4a5c-a9e1-577454272b35)
+
 
 This Python code creates a desktop application using the Tkinter library for graphical interface. The application allows the user to search for the price of the dollar and the euro on the web using the Microsoft Edge browser and displays the chosen currency's value and its multiplications from 2 to 10.
 
