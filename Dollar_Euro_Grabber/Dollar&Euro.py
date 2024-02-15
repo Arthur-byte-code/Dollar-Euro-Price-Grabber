@@ -3,6 +3,7 @@ import time
 import pyperclip
 import tkinter as tk
 from tkinter import ttk
+from PIL import Image, ImageTk
 
 # Function to search for Dollar price
 def SearchDolar():
@@ -94,11 +95,23 @@ def SearchEuro():
 
 root = tk.Tk()
 root.title("Exemplo com ttk")
-root.geometry("400x300")
+root.geometry("400x400")
+
+
 
 # Control variables for the texts displayed in the interface
 dolarWindow = tk.StringVar()
 dolarMultiplicado = tk.StringVar()
+
+#background image tha reads the file named "bg.jpg"
+background_image = Image.open("bg.jpg")  
+background_image = background_image.resize((400, 400))
+background_photo = ImageTk.PhotoImage(background_image)
+
+# Background image
+background_label = tk.Label(root, image=background_photo)
+background_label.place(x=0, y=0, relwidth=1, relheight=1)
+
 
 # Label for Dollar value
 label_dolar = ttk.Label(root, textvariable=dolarWindow)
@@ -109,11 +122,12 @@ label_multiplicado = ttk.Label(root, textvariable=dolarMultiplicado)
 label_multiplicado.pack()
 
 # Button to search for Dollar price
-buttonDolar = ttk.Button(root, text="Buscar preço do Dólar", command=SearchDolar)
+buttonDolar = ttk.Button(root, text="Search Dollar", command=SearchDolar)
 buttonDolar.pack()
 
 # Button to search for Euro price
-buttonEuro = ttk.Button(root, text="Buscar preço do Euro", command=SearchEuro)
+buttonEuro = ttk.Button(root, text="Search Euro", command=SearchEuro)
 buttonEuro.pack()
+
 
 root.mainloop()
